@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="movie"
+            type="com.example.movies.models.Movie" />
+    </data>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="175dp"
+            android:layout_margin="5dp"
+            android:id="@+id/ivPoster"
+            android:background="#DDD"
+            app:imageUrl="@{movie.posterUrl}"
+            app:placeHolder="@{ @drawable/placeholder }"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@{movie.name}"
+            android:layout_toRightOf="@+id/ivPoster"
+            tools:text="Pirates Of The Carribean" />
+
+        <TextView
+            android:id="@+id/tvBudget"
+            android:layout_width="225dp"
+            android:layout_height="44dp"
+            android:layout_below="@+id/tvName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/ivPoster"
+            android:gravity="center"
+            android:text="@{movie.budget}"
+            tools:text="20000000$" />
+
+        <TextView
+            android:layout_below="@+id/tvBudget"
+            android:layout_margin="10dp"
+            android:id="@+id/tvGenre"
+            android:layout_toRightOf="@+id/ivPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{movie.genre}"
+            tools:text="Commedy | Romance"/>
+
+
+    </RelativeLayout>
+</layout>
