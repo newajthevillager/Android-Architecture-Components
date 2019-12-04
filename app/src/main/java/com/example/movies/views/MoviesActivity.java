@@ -10,18 +10,18 @@ import android.os.Bundle;
 import com.example.movies.R;
 import com.example.movies.adapters.MovieAdapter;
 import com.example.movies.data.MovieData;
-import com.example.movies.databinding.ActivityMainBinding;
+import com.example.movies.databinding.ActivityMoviesBinding;
 import com.example.movies.models.Movie;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MoviesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setContentView(R.layout.activity_movies);
+        ActivityMoviesBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_movies);
 
 
 

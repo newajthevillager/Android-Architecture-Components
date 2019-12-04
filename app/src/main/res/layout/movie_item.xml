@@ -52,7 +52,7 @@
             android:layout_marginBottom="10dp"
             android:layout_toRightOf="@+id/ivPoster"
             android:gravity="center"
-            android:text="@{movie.budget}"
+            android:text="@{`Budget : ` + movie.budget}"
             tools:text="20000000$" />
 
         <TextView
