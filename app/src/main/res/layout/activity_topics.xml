@@ -29,7 +29,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Players"
+            android:text="Room Database"
             android:onClick="@{(view) -> handler.navigateToPlayers(view)}" />
 
     </LinearLayout>
